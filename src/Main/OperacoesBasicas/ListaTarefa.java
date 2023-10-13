@@ -13,7 +13,7 @@ public class ListaTarefa {
         this.tarefaList = new ArrayList<>();
     }
 
-    public void adicionarTarfa(String descricao){
+    public void adicionarTarefa(String descricao){
         tarefaList.add(new Tarefa(descricao));
     }
 
@@ -33,6 +33,24 @@ public class ListaTarefa {
 
     public void obterDescricoesTarefas(){
         System.out.println(tarefaList);
+    }
+
+    public static void main(String[] args) {
+        ListaTarefa listaTarefa = new ListaTarefa();
+
+        System.out.println("o número total de elementos na lista é: " + listaTarefa.obterNumeroTotalDeTarefas()); //ctrl + d para duplicar
+
+        listaTarefa.adicionarTarefa("Tarefa 1");
+        listaTarefa.adicionarTarefa("Tarefa 1");
+        listaTarefa.adicionarTarefa("Tarefa 2");
+        System.out.println("o número total de elementos na lista é: " + listaTarefa.obterNumeroTotalDeTarefas()); // ctrl + shift para mover pra cima e pra baixo.
+
+
+        listaTarefa.removerTarefa("Tarefa 1");
+        System.out.println("o número total de elementos na lista é: " + listaTarefa.obterNumeroTotalDeTarefas()); // ctrl + shift para mover pra cima e pra baixo.
+
+        listaTarefa.obterDescricoesTarefas();
+
     }
 
 }
